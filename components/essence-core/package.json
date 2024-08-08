@@ -1,0 +1,71 @@
+{
+  "name": "essence-core",
+  "version": "1.0.20",
+  "description": "Essence Core - Essence components",
+
+  "license": "MIT",
+  "repository": "git://github.com/Evo-Forge/Essence",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel --presets react,es2015 src --out-dir lib; cd src; find . \\( -name '*.less' -o -name '*.eot' -o -name '*.svg' -o -name '*.ttf' -o -name '*.woff' \\)  -print0  | cpio -0pdmu ../lib; cd ../;",
+    "webpack": "NODE_ENV=production webpack -p --config webpack.config.js"
+  },
+  "keywords": [
+    "color palette",
+    "component",
+    "essence",
+    "google material",
+    "grid lists",
+    "javascript",
+    "less css",
+    "less",
+    "lesscss",
+    "material components",
+    "material design framework",
+    "material design",
+    "material",
+    "module",
+    "react component",
+    "react components",
+    "react native",
+    "react",
+    "react-component",
+    "template",
+    "templates",
+    "tile",
+    "tiles",
+    "UI component",
+    "UI kit",
+    "UI kits",
+    "UI",
+    "widget",
+    "gris system",
+    "divider",
+    "ripple ink",
+    "typography",
+    "text",
+    "utility",
+    "utilities",
+    "position",
+    "color",
+    "screen size",
+    "document size",
+    "timer",
+    "backgroundcolor",
+    "clickposition",
+    "client"
+  ],
+  "devDependencies": {
+    "react": "^0.14.x",
+    "react-addons-css-transition-group": "^0.14.x",
+    "react-addons-transition-group": "^0.14.x"
+  },
+  "peerDependencies": {
+    "react": "^0.14.x"
+  },
+  "dependencies": {
+    "classnames": "^2.x",
+    "react-addons-css-transition-group": "^0.14.x",
+    "react-addons-transition-group": "^0.14.x"
+  }
+}

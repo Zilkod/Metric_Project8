@@ -1,0 +1,73 @@
+@import (reference) '../../essence-core/src/less/mixins.less';
+
+// width
+ @e-dialogs-width:80%;
+ @e-dialogs-color: @e-color-blue-grey-800;
+
+// Dialogs component
+.e-dialog-container {
+  position: relative;
+}
+.e-dialog{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 20%;
+  z-index: 7;
+  padding: @e-unit*3 0 0 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  // Display
+  max-width: @e-dialogs-width;
+  margin: 0 auto;
+
+  // Other
+  background-color: @e-color-white;
+  .transition(all 0.2s ease-in-out);
+
+
+  .e-dialogs-header{
+    padding: 0 @e-unit*3 @e-unit*2.5 @e-unit*3;
+
+    h2{
+      color:@e-color-blue-grey-800;
+      line-height: 1;
+    }
+  }
+
+  .e-dialogs-content{
+    padding: 0 @e-unit*3 @e-unit*3 @e-unit*3;
+
+    p{
+      color:@e-color-blue-grey-600;
+      font-size: @e-unit*1.75;
+      margin: 0;
+    }
+  }
+
+  .e-dialogs-actions{
+    width: auto;
+    min-height: @e-unit*6;
+    padding-left: @e-unit*3;
+    text-align: right;
+  }
+}
+
+//show overlay when dialog is opened
+.e-main {
+  &.dialog-visible {
+    .e-modal-bg {
+      display: block;
+      z-index: 6;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+
+  .e-dialog {
+    max-width: @e-dialogs-width/2;
+  }
+}

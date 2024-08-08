@@ -1,0 +1,57 @@
+{
+  "name": "essence-tab",
+  "version": "1.0.6",
+  "description": "Essence Tab - Tab & TabItem components",
+
+  "license": "MIT",
+  "repository": "git://github.com/Evo-Forge/Essence",
+  "main": "lib/tab.js",
+  "scripts": {
+    "babel": "babel --presets react,es2015 src --out-dir lib && cp src/tab.less lib/tab.less",
+    "webpack": "NODE_ENV=production webpack -p --config webpack.config.js"
+  },
+  "keywords": [
+    "color palette",
+    "component",
+    "essence",
+    "google material",
+    "grid lists",
+    "javascript",
+    "less css",
+    "less",
+    "lesscss",
+    "material components",
+    "material design framework",
+    "material design",
+    "material",
+    "module",
+    "react component",
+    "react components",
+    "react native",
+    "react",
+    "react-component",
+    "template",
+    "templates",
+    "tile",
+    "tiles",
+    "UI component",
+    "UI kit",
+    "UI kits",
+    "UI",
+    "widget",
+    "tab",
+    "bar",
+    "tab-bar",
+    "tab bar"
+  ],
+  "devDependencies": {
+    "react": "^0.14.x"
+  },
+  "peerDependencies": {
+    "react": "^0.14.x"
+  },
+  "dependencies": {
+    "classnames": "^2.x",
+    "essence-core": "^1.x"
+  }
+}

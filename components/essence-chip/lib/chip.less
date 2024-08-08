@@ -1,0 +1,82 @@
+@import (reference) '../../essence-core/src/less/mixins.less';
+
+ul.chips {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: (@e-unit * 4);
+    line-height: (@e-unit * 4);
+    display: inline-block;
+    border: (@e-unit * (0.125)) solid @e-color-grey-300;
+    background: @e-color-grey-300;
+    .border-radius( (@e-unit * 2) );
+    margin-right: (@e-unit * 0.5);
+
+    &:hover {
+        background: @e-color-grey-700;
+        border: (@e-unit * (0.125)) solid @e-color-grey-700;
+        .transition(all 0.2s);
+
+        li {
+            .e-text-white();
+            .deletable {
+                color: @e-color-grey-700;
+                background: @e-color-white;
+                opacity: 1;
+            }
+            .icon {
+                background: @e-color-grey-500;
+            }
+        }
+    }
+
+    li {
+        cursor: default;
+        font-size: 1.3rem;
+        color: rgba(0, 0, 0, 0.87);
+        position: relative;
+        padding-right: (@e-unit * 1.5);
+
+        .deletable {
+            cursor: default;
+            width: (@e-unit * 2.5);
+            height: (@e-unit * 2.5);
+            background: @e-color-black;
+            display: block;
+            line-height: (@e-unit * 2.5);
+            text-align: center;
+            .border-radius(50%);
+            color: @e-color-white;
+            opacity: .54;
+            float: right;
+            margin: (@e-unit * 0.75) (@e-unit * (-0.5)) 0 (@e-unit * (0.5));
+
+            &:after {
+                content: "\00d7";
+                display: inline-block;
+            }
+        }
+
+        .icon {
+            margin: (@e-unit * (-0.125)) (@e-unit) 0 (@e-unit * (-0.25));
+            .border-radius(50%);
+            background-color: @e-color-teal-500;
+            width: (@e-unit * 4.25);
+            height: (@e-unit * 4.25);
+            text-align: center;
+            line-height: (@e-unit * 4.25);
+            display: block;
+            float: left;
+            font-size: (@e-unit * 2);
+            color: @e-color-white;
+            font-weight: 100;
+        }
+
+        .empty {
+            float: left;
+            width: (@e-unit * 1.5);
+            height: (@e-unit * 4);
+            display: block;
+        }
+    }
+}
